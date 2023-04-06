@@ -1,0 +1,28 @@
+<table class="table table-dark table-striped" *ngIf="employees.length > 0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let user of employees">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>0{{user.phone}}</td>
+            <td>{{user.salary}}</td>
+            <td>{{user.department}}</td>
+            <td>
+                <a class="btn-edit" [routerLink]="['/edit', user.id]">View</a>
+            </td>
+        </tr>
+    </tbody> 
+</table>
+
+<h2 *ngIf="employees.length <= 0">No Employees</h2>
