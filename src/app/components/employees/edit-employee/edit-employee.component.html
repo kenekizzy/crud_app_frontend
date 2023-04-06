@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Edit Employee</h2>
+    <form #form="ngForm" (ngSubmit)="updateEmployee()">
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" name="name" class="form-control" id="name" [(ngModel)]="existingEmployee.name">
+          </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" name="email" class="form-control" id="email" [(ngModel)]="existingEmployee.email">
+        </div>
+        <div class="mb-3">
+            <label for="number" class="form-label">Phone Number</label>
+            <input type="number" name="phone" class="form-control" id="number" [(ngModel)]="existingEmployee.phone">
+        </div>
+          <div class="mb-3">
+            <label for="salary" class="form-label">Salary</label>
+            <input type="number" name="salary" class="form-control" id="salary" [(ngModel)]="existingEmployee.salary">
+          </div>
+          <div class="mb-3">
+            <label for="department" class="form-label">Department</label>
+            <input type="text" name="department" class="form-control" id="department" [(ngModel)]="existingEmployee.department">
+          </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-danger" (click)="deleteEmployee(existingEmployee.id)">Delete</button>
+      </form> 
+</div>
+
